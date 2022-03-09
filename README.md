@@ -1,4 +1,4 @@
-** This a quick hack to the great tool below to fix a field type error when exporting from mssql to postgres, I recommend going to the original repo for more info and reference **
+**This a quick hack to the great tool below to fix a field type error when exporting from mssql to postgres, I recommend going to the original repo for more info and reference**
 
 
 DBTransfer
