@@ -27,6 +27,7 @@ public class SQLServerHelper extends NullHelper
 		OUTPUT_TYPE.put( "long", "bigint" );
 		OUTPUT_TYPE.put( "double", "float" );
 		OUTPUT_TYPE.put( "longvarchar", "varchar(MAX)" );
+		// OUTPUT_TYPE.put( "longvarchar", "text" );
 		
 		RESERVED.put( "database", "database" );
 		RESERVED.put( "order", "order" );

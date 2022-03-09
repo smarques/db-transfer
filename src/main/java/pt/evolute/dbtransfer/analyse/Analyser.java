@@ -73,7 +73,20 @@ public class Analyser implements ConfigurationProperties
 				}
 				buff.append( DEST_TR.outputName( def.name.saneName ) );
 				buff.append( " " );
-				buff.append( translate( def.sqlTypeName, def.sqlSize ) );
+				if( def.sqlSize != null && translate( def.sqlTypeName, def.sqlSize ).contains( "varchar" )){
+					if( def.sqlSize > 10485760 ){
+						// def.sqlSize = 10485760;
+						buff.append( translate( def.sqlTypeName, 10485760 ) );
+					} 
+					else {
+						buff.append( translate( def.sqlTypeName, def.sqlSize ) );
+					}
+				}	else {
+						buff.append( translate( def.sqlTypeName, def.sqlSize ) );
+				}
+			
+				System.out.println( "|-|-|" + def.sqlTypeName+ def.sqlSize + translate( def.sqlTypeName, def.sqlSize ) );
+		
 /*				if( def.sqlSize != null )
 				{
 						buff.append( "( " );

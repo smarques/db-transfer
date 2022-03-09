@@ -23,6 +23,7 @@ public class PostgreSQLServerHelper extends NullHelper
 	{
 		OUTPUT.put( "boolean", "bool" );
 		OUTPUT.put( "datetime", "timestamp" );
+		OUTPUT.put( "datetime2", "timestamp" );
 		OUTPUT.put( "datetimetz", "timestamptz" );
 		OUTPUT.put( "blob", "bytea" );
 		OUTPUT.put( "longblob", "bytea" );
@@ -251,6 +252,8 @@ public class PostgreSQLServerHelper extends NullHelper
 				pType = Types.LONGVARCHAR;
 			case Types.BOOLEAN:
 				pType = Types.BIT;
+			// case "Types.BOOLEAN":
+			// 	pType = Types.BIT;
 			default:
 				break;
 		}
